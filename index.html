@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-18">
-        <meta name="viewpont" content="width=device-width, initial-scale=1.0">
-        <title>document</title>
-    </head>
-    <body>
-        <h1>How are you</h1>
-    </body>
-    </html>
+
+<head>
+    <meta charset="UTF-18">
+    <meta name="viewpont" content="width=device-width, initial-scale=1.0">
+    <title>Bag Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="bg-gray-100 h-[90vh]">
+        <nav class="flex justify-between items-center px-4 lg:px-[100px] py-4 bg-white shadow-lg">
+            <div id="logo" class="flex items-center">
+                <div class="w-[70px]">
+                    <img
+                    class="w-full"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAA51BMVEX////vRyP8///5///+//3+/f/tSCPuRyX/+//wRiXyRSTwRB76//3rSSPvRifxRiLvNwDxQBjsiXftPAv89vP0oI/xuq/yOw32+fLzlYHusJ7vKwD0Qij15+X6//j16tvpclbxxr3xZUrtl4H37unz1NDxwrPqWTz03trxraDjSyProYX15t7y3dPxeWDwbFbsfmfvu6TwUS/unJTtLRLohGr8LgD7PibvkW/njHzjaFzpno/lSBXzUj7uzb7lzsPbo47iu6LiiW/joJrhBADnaEjsWzLq3snmsJPnVUP2g3XeSSzxYVb1AyDeAAANMElEQVR4nO2cC3uiOhrHIQEshEtiEBCqFgSRDipDL7Ot1tkz5zh75sx+/8+zia29TLW2HbHtPvzmaadW2+Zv3msCEYSampqampqampqampqampqampqampqampqampqampqampqatwLwDyDZtn3ziD2QBIF/fDQkGQB7GDpZq9XKBmEHSDoAgGuS5Lce24uBYOi0JwrmBMefOkyIZOfDJBnGEgBvPbpnIy8tqeMfKS5BiFCX9hMPeiOn1RxPosm46GfJ0vKED2Bw/H3Xw7HiKghjI50cfbaBN2hGJXEJoZRQYqZjJ2avk9+9wUm6DO1p6WoIG+35sBPHEhwVJZkpyF0aHUUGQuLEsYUPYW1xm8xEihxPkiFk03TChq/i4HTS9zP/09lxcP7FIspZ763H+QxA/K9TjeALDy69AnYvcQO5tBh04dIEhe5oOsOHFr76CiX9rUe7BXsaKNR0unDpEaA3wSZCZwmLYaDTG+YxBBB02zPNJMdz/eCdqwmphtI5hAddgU/TGJskdbosxUB4EgTBj0TiX84XxHLLOXzr0T4JyCNqlQMoH7CELwhen8xQ9JVFrqWBTQnCTRbIugLMm0h0o/wdRzQZyi2sKlNvGalY0ndKjaRfwSqleE2XUAdw2wIxU4ObXfndphsZDglyixwIS18Aowki1gDevPtAAqOUknG8fBbkBRGDAXi3YnRheo7KwSodSj5Rzv3uypTkru5lGNFQ4K4CYJISmnrwvYqR4TEiRXz9QALDiUsilhxXfsHqnGFE3Ka+TJdAb7H0M3i3uROMAkPLVqPTBy46Hzx8hd3C5Ed884o8nZ0e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"
+                        alt="logo">
+                </div>
+                <h2 class="text-2xl font-normal">Handmade Bags</h2>
+            </div>
+            <ul id="nav-links" class=" gap-8 hidden lg:flex">
+                <li><a class="text-lg hover:text-green-700" href="#">Home</a></li>
+                <li><a class="text-lg hover:text-green-700"href="./pages/New.html">New</a></li>
+                <li><a class="text-lg hover:text-green-700" href="./pages/bags.html">Bags</a></li>
+                <li><a class="text-lg hover:text-green-700"href="./pages/backpacs.html">Backpacs</a></li>
+                <li><a class="text-lg hover:text-green-700"href="./pages/Cosmetic bags.html">Cosmetic bags</a></li>
+                <li><a class="text-lg hover:text-green-700" href="./pages/about Us.html">About Us</a></li>
+                <li><a class="text-lg hover:text-green-700"href="./pages/Contact.html">Contact</a></li>
+            </ul>
+            <div id="shopping-cart"class="flex ">
+                <div class="lg:hidden">
+                <i class="fa-solid fa-bars text-3xl mr-5 inline lg:hidden"></i>
+                </div>
+                <i class="fa-solid fa-cart-shopping text-3xl"></i>
+            </div>
+        </nav>
+        <section 
+        class="flex items-center pl-6 pl-[200px] h-full bg-center bg-cover bg-no-repeat bg-[url(https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/webpage_14/m67nq6gj/element_150/0/rwdMode_1/1200x513/bags002.jpg)]">   
+        <div class="lg:w-[30%] w-[50%]">
+                <h1 class="text-6xl font-semibold mb-8 text 7xl">New collection</h1>
+                <p class="mb-8">The highest quality products, sewn in Ireland from Irish materials. Quality and durability for years.</p>
+                <button class="bg-green-600 px-10 py-3 text-white mt-8">New collection</button>
+            </div>
+            
+        </section>
+        <section></section>
+    </header>
+    <main>
+        <section class="mt-[200px]">
+          <div class="w-[80%] grid grid-cols-4 gap-8 mx-auto ">
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_8/m67nq7k7/element_209/rwdMode_1/340x340/BAGS008.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Backpack Sandra</h4>
+                <p>80 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_5/m67nq6tm/element_209/rwdMode_1/340x340/BAGS025.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Backpack Emily</h4>
+                <p>80 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_3/m67nq7wx/element_209/rwdMode_1/340x340/BAGS11.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Backpack Natalie</h4>
+                <p>80 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_2/m67nq7se/element_209/rwdMode_1/340x340/BAGS014.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Backpack Lily</h4>
+                <p>80 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img  class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_4/m67nq81v/element_209/rwdMode_1/340x340/BAGS024.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Bag Sandra</h4>
+                <p>60 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_7/m67nq7b1/element_209/rwdMode_1/340x340/BAGS018.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Bag Jenny</h4>
+                <p>60 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_6/m67nq72b/element_209/rwdMode_1/340x340/BAGS022.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Bag Catherine</h4>
+                <p>60 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_9/m67nq6ou/element_209/rwdMode_1/340x340/BAGS018.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Bag Mary</h4>
+                <p>60 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img  class="w-full hover:scale-125"
+                     src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_10/m67nq6y4/element_209/rwdMode_1/340x340/BAGS015.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Cosmetic Bag Emily</h4>
+                <p>30 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_1/m67nq7o2/element_209/rwdMode_1/340x340/BAGS012.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Cosmetic Bag Martha</h4>
+                <p>30 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_12/m67nq7fh/element_209/rwdMode_1/340x340/BAGS021.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Cosmetic Bag Lily</h4>
+                <p>30 USD</p>
+            </div>
+            <div class="text-center">
+                <div class="overflow-hidden">
+                    <img class="w-full hover:scale-125"
+                    src="https://otlgdi.yourbrand.studio/files/dynamicContent/sites/otlgdi/images/en/productpage_11/m67nq76p/element_209/rwdMode_1/340x340/BAGS006.webp" alt="">
+
+                </div>
+                <h4 class="text-2xl font-semibold my-3">Cosmetic Bag Sandra</h4>
+                <p>30 USD</p>
+            </div>
+           </div>
+        </section>
+        <section>
+
+        </section>
+    </main>
+    <footer>
+        <div>
+
+        </div>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
